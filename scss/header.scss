@@ -1,0 +1,152 @@
+@import "bourbon";
+@import "vars";
+@import "fonts";
+
+
+.shake{
+  animation-name: shake;
+  animation-timing-function: ease;
+  animation-duration: .4s;
+}
+
+@include keyframes(shake){
+  from{
+    transform: translateX(0px);
+  }
+  20%,60%{
+    transform: translateX(-10px);
+  }
+  40%,80%{
+    transform: translateX(10px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@if $adaptive == true {
+  @media (max-width: 480px){
+
+  }
+}
+
+body{
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url("../img/raster/bodyline.jpg");
+  background-repeat: repeat;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+header{
+  background-image: url("../img/raster/hbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 91px;
+  padding-bottom: 143px;
+  h1{
+    margin-top: 30px;
+  }
+}
+
+.absolute-block{
+  position: absolute;
+  bottom: -186px;
+  background-color: white;
+  padding: 30px;
+  h4{
+    color: #00243e;
+    font-size: 16px;
+    font-weight: 400;
+    border-left: 3px solid #0070be;
+    padding-left: 15px;
+  }
+}
+
+.absolute-block-mod{
+  h4{
+    border: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.h-block{
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  background-color: #00243e;
+  display: inline-block;
+  padding: 3px 9px;
+}
+
+.details{
+  text-align: center;
+  padding-top: 116px;
+  padding-bottom: 80px;
+}
+
+.details-content{
+  margin-top: 30px;
+  @if $adaptive == true {
+    @media (max-width: 625px){
+      margin-top: 0;
+    }
+  }
+}
+
+.details-item-mid{
+  margin: 0 205px;
+  @if $adaptive == true {
+    @media (max-width: 915px){
+      margin: 0 150px;
+    }
+    @media (max-width: 805px){
+      margin: 0 100px;
+    }
+    @media (max-width: 705px){
+      margin: 0 50px;
+    }
+    @media (max-width: 625px){
+      margin: 0;
+    }
+  }
+}
+
+.details-item{
+  display: inline-block;
+  vertical-align: top;
+  @if $adaptive == true {
+    @media (max-width: 625px){
+      display: block;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 15px;
+  }
+}
+
+//.pxperfect{
+//  position: absolute;
+//  top: 0;
+//  left: 50%;
+//  margin-left: -585px;
+//  opacity: .5;
+//}
+
+
+
+
+
+
+
+
+
+
+
